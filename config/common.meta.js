@@ -1,7 +1,7 @@
 const pj = require('../package.json')
 module.exports = {
   name: pj.name,
-  namespace: `https://github.com/${pj.author}/${pj.name}`,
+  namespace: `https://github.com/${pj.author}/monkey-${pj.name}`,
   version: '0.0.1',
   description: 'awesome',
   author: `${pj.author}`,
