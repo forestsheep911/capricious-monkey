@@ -1,7 +1,7 @@
 {
-  "name": "app-name",
+  "name": "monkey",
   "version": "0.0.1",
-  "description": "",
+  "description": "write description here",
   "main": "/dist/app.user.js",
   "scripts": {
     "start": "webpack serve --config ./config/webpack.dev.js",
@@ -15,7 +15,6 @@
     "url": "git+https://github.com/yourname/your-app.git"
   },
   "keywords": [
-    "app",
     "TamperMonkey",
     "typescript"
   ],

@@ -1,8 +1,9 @@
 const webpack = require('webpack')
+const devBanner = require('./dev.meta.js')
 const { baseOptions, getBanner } = require('./webpack.config.base')
 
-module.exports = (env) => {
-  baseOptions.output.filename = env.filename
+module.exports = () => {
+  baseOptions.output.filename = `${devBanner.name}.user.js`
   baseOptions.plugins.push(
     new webpack.BannerPlugin({
       banner: getBanner({}),
@@ -11,7 +12,7 @@ module.exports = (env) => {
     }),
     new webpack.DefinePlugin({
       PRODUCTION: true,
-    })
+    }),
   )
   baseOptions.mode = 'production'
 
