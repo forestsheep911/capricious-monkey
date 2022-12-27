@@ -1,3 +1,4 @@
+const { resolve } = require('path')
 const webpack = require('webpack')
 const devBanner = require('./dev.meta.js')
 const { baseOptions, getBanner } = require('./webpack.config.base')
