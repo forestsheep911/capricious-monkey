@@ -1,5 +1,5 @@
 {
-  "name": "monkey",
+  "name": "monkey-xxx-xxx",
   "version": "0.0.1",
   "description": "write description here",
   "main": "/dist/app.user.js",
@@ -16,14 +16,14 @@
   },
   "keywords": [
     "TamperMonkey",
-    "typescript"
+    "TypeScript"
   ],
   "author": "you",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yourname/your-app/issues"
   },
-  "homepage": "https://github.com/yourname/your-app#readme",
+  "homepage": "https://github.com/yourname/your-app",
   "devDependencies": {
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
