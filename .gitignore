@@ -23,8 +23,7 @@
 # Recommended template: Node.gitignore
 
 node_modules/
-dist/*.*
-dist/dev/*.* 
+dist/
 npm-debug.log
 yarn-error.log
 
