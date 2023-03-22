@@ -5,6 +5,7 @@ const { baseOptions, getBanner } = require('./webpack.config.base')
 const devBanner = require('./dev.meta.js')
 
 module.exports = () => {
+  baseOptions.output.path = path.resolve(__dirname, '../dist/dev')
   baseOptions.output.filename = `${devBanner.name}.dev.user.js`
   baseOptions.plugins.push(
     new webpack.BannerPlugin({
@@ -16,10 +17,10 @@ module.exports = () => {
       PRODUCTION: false,
       FILENAME: JSON.stringify(`${devBanner.name}.dev.user.js`),
     }),
-    new HtmlWebpackPlugin({
-      template: './public/index.html',
-      inject: 'body',
-    }),
+    // new HtmlWebpackPlugin({
+    //   template: './public/index.html',
+    //   inject: 'body',
+    // }),
   )
   baseOptions.devServer = {
     static: [

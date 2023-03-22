@@ -5,5 +5,5 @@ module.exports = {
   namespace: `https://github.com/${pj.author}/monkey-${pj.name}`,
   match: ['https://*'],
   grant: ['GM_getValue', 'GM_setValue', 'GM_addValueChangeListener'],
-  require: [`file://${resolve(__dirname, '../dist/').replaceAll('\\', '/')}/${pj.name}.dev.user.js`],
+  require: [`file://${resolve(__dirname, '../dist/dev').replaceAll('\\', '/')}/${pj.name}.dev.user.js`],
 }
