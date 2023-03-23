@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name                pj.name
+// @name                monkey-xxx-xxx
 // @namespace           https://github.com/yourname/your-app
 // @version             0.0.1
 // @description         write description here
