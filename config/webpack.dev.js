@@ -7,6 +7,17 @@ const fs = require('fs')
 const outputPath = path.resolve(__dirname, '../dist/dev')
 const monkeyHeader = `${devBanner.name}.header.js`
 
+function ensureDirectoryExistence(filePath) {
+  var dirname = path.dirname(filePath)
+  console.log(filePath)
+  console.log(dirname)
+  if (fs.existsSync(dirname)) {
+    return true
+  }
+  ensureDirectoryExistence(dirname)
+  fs.mkdirSync(dirname)
+}
+ensureDirectoryExistence(`${outputPath}/dummy`)
 fs.writeFile(path.join(outputPath, monkeyHeader), getBanner(devBanner), () => {})
 
 module.exports = () => {
