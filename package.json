@@ -2,7 +2,7 @@
   "name": "monkey-xxx-xxx",
   "version": "0.0.1",
   "description": "write description here",
-  "main": "./main.js",
+  "main": "",
   "scripts": {
     "start": "webpack serve --config ./config/webpack.dev.js",
     "dev": "webpack --watch --config ./config/webpack.dev.js",
