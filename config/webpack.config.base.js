@@ -125,6 +125,7 @@ const baseOptions = {
     },
   },
   plugins: [],
+  devtool: 'source-map',
 }
 
 module.exports = {
