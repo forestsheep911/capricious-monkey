@@ -1,18 +1,15 @@
+// config/dev.meta.js
 const pj = require('../package.json')
 const { resolve } = require('path')
+const commonMeta = require('./common.meta')
+
 module.exports = {
-  name: `${pj.name}`,
-  namespace: `https://github.com/${pj.author}/monkey-${pj.name}`,
+  ...commonMeta, // 继承公共配置
+  namespace: `https://github.com/${pj.author}/monkey-${pj.name}`, // 覆盖 namespace
   match: [
-    'https://*.cybozu.cn/k/*/show*',
-    'https://*.cybozu.com/k/*/show*',
-    'https://*.cybozu-dev.com/k/*/show*',
-    'https://*.kintone.com/k/*/show*',
-    'https://*.s.cybozu.cn/k/*/show*',
-    'https://*.s.cybozu.com/k/*/show*',
-    'https://*.s.kintone.com/k/*/show*',
-    'http://localhost:8080',
+    ...commonMeta.match, // 继承并扩展 match
+    'http://localhost:8864', // 开发专属 match
   ],
-  grant: ['GM_getValue', 'GM_setValue', 'GM_addValueChangeListener'],
-  require: [`file://${resolve(__dirname, '../dist/dev').replaceAll('\\', '/')}/${pj.name}.script.js`],
+  grant: ['GM_getValue', 'GM_setValue', 'GM_addValueChangeListener'], // 开发专属 grant
+  require: [`file://${resolve(__dirname, '../dist/dev').replaceAll('\\', '/')}/${pj.name}.script.js`], // 开发专属 require
 }
